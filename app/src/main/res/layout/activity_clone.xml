@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Back / Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡ Clone Master"
+            android:textColor="#E94560"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- App Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/ivAppIcon"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvPackageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Method 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="METHOD 1 — Multiple Users"
+            android:textColor="#E94560"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creates a second Android user profile. Each user has isolated app data — perfect for two accounts."
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnMethod1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Open Multiple Users Settings"
+            android:backgroundTint="#1A1A2E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Method 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="METHOD 2 — Work Profile"
+            android:textColor="#E94560"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uses Android Work Profile (requires setup via an MDM app like Shelter). Open Play Store to install in work profile."
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnMethod2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Open in Play Store"
+            android:backgroundTint="#1A1A2E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Method 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="METHOD 3 — ADB / Manual Clone"
+            android:textColor="#E94560"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share app package info with ADB command to install the app into a second user via USB debugging."
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnMethod3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Share Package Info + ADB Command"
+            android:backgroundTint="#1A1A2E"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- App Settings -->
+        <Button
+            android:id="@+id/btnOpenSettings"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Open App System Settings"
+            android:backgroundTint="#E94560"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

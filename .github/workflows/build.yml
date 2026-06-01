@@ -22,6 +22,11 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Download real gradlew
+        run: |
+          curl -L https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradlew -o gradlew
+          chmod +x gradlew
+
       - name: Generate launcher icons
         run: |
           for d in mipmap-hdpi mipmap-mdpi mipmap-xhdpi mipmap-xxhdpi mipmap-xxxhdpi; do
@@ -31,9 +36,7 @@ jobs:
           done
 
       - name: Build debug APK
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
